@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Reboot.DDD.Demo.Api.Dto\Reboot.DDD.Demo.Api.Dto.csproj" />
+    <ProjectReference Include="..\Reboot.DDD.Demo.Domain\Reboot.DDD.Demo.Domain.csproj" />
+    <ProjectReference Include="..\Reboot.DDD.Demo.Infrastructure.EFCore\Reboot.DDD.Demo.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\Reboot.DDD.Demo.Infrastructure.Weather\Reboot.DDD.Demo.Infrastructure.Weather.csproj" />
+  </ItemGroup>
+
+</Project>

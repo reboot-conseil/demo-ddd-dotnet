@@ -1,0 +1,6 @@
+@Reboot.DDD.Demo_HostAddress = https://localhost:5001
+
+GET {{Reboot.DDD.Demo_HostAddress}}/weather/forecast/
+Accept: application/json
+
+###
