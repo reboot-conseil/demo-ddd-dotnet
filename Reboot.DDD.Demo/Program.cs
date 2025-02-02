@@ -1,6 +1,10 @@
 using Reboot.DDD.Demo.Api.Endpoints;
+using Reboot.DDD.Demo.Application;
+using Reboot.DDD.Demo.Domain;
 using Reboot.DDD.Demo.Infrastructure.EFCore;
-using Reboot.DDD.Demo.Infrastructure.Weather;
+using Reboot.DDD.Demo.Infrastructure.Paypal;
+using Reboot.DDD.Demo.Infrastructure.Repositories;
+using Reboot.DDD.Demo.Infrastructure.Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +13,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-InfrastructureWeatherModule.Register(builder.Services);
+InfrastructureStripeModule.Register(builder.Services);
+// InfrastructurePaypalModule.Register(builder.Services);
 InfrastructureEFCoreModule.Register(builder.Services);
+ApplicationModule.Register(builder.Services);
+DomainModule.Register(builder.Services);
+InfrastructureRepositoriesModule.Register(builder.Services);
 
 var app = builder.Build();
 
@@ -25,4 +33,4 @@ app.UseHttpsRedirection();
 
 app.MapEndpoints();
 
-app.Run();
+await app.RunAsync();

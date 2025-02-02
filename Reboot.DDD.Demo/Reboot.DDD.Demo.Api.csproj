@@ -17,9 +17,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Reboot.DDD.Demo.Api.Dto\Reboot.DDD.Demo.Api.Dto.csproj" />
+    <ProjectReference Include="..\Reboot.DDD.Demo.Application\Reboot.DDD.Demo.Application.csproj" />
     <ProjectReference Include="..\Reboot.DDD.Demo.Domain\Reboot.DDD.Demo.Domain.csproj" />
     <ProjectReference Include="..\Reboot.DDD.Demo.Infrastructure.EFCore\Reboot.DDD.Demo.Infrastructure.EFCore.csproj" />
-    <ProjectReference Include="..\Reboot.DDD.Demo.Infrastructure.Weather\Reboot.DDD.Demo.Infrastructure.Weather.csproj" />
+    <ProjectReference Include="..\Reboot.DDD.Demo.Infrastructure.Paypal\Reboot.DDD.Demo.Infrastructure.Paypal.csproj" />
+    <ProjectReference Include="..\Reboot.DDD.Demo.Infrastructure.Repositories\Reboot.DDD.Demo.Infrastructure.Repositories.csproj" />
+    <ProjectReference Include="..\Reboot.DDD.Demo.Infrastructure.Stripe\Reboot.DDD.Demo.Infrastructure.Stripe.csproj" />
   </ItemGroup>
 
 </Project>
