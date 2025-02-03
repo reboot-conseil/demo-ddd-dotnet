@@ -13,8 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-InfrastructureStripeModule.Register(builder.Services);
-// InfrastructurePaypalModule.Register(builder.Services);
+//InfrastructureStripeModule.Register(builder.Services);
+InfrastructurePaypalModule.Register(builder.Services);
 InfrastructureEFCoreModule.Register(builder.Services);
 ApplicationModule.Register(builder.Services);
 DomainModule.Register(builder.Services);

@@ -8,7 +8,7 @@ public class Order
     public DateTime OrderDate { get; set; }
     public int UserId { get; set; }
     public User User { get; set; }
-    public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+    public ICollection<OrderItem> OrderItems { get; set; } = [];
 
     public decimal CalculateTotalPrice()
     {

@@ -9,7 +9,7 @@ public static class OrderEndpoints
 {
     public static RouteGroupBuilder RegisterOrderEndpoints(this RouteGroupBuilder app)
     {
-        app.MapPost("/order", async (
+        app.MapPost("/payment", async (
             [FromBody] PayOrderRequest request,
             [FromServices] IOrderAppService OrderService
         ) =>
